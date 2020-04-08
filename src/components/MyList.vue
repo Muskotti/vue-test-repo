@@ -3,14 +3,22 @@
     <template v-slot:default>
       <thead>
         <tr>
-          <th class="text-left">Name</th>
-          <th class="text-left">Calories</th>
+          <th class="text-left">First name</th>
+          <th class="text-left">Last name</th>
+          <th class="text-left">E-Mail</th>
+          <th class="text-left">Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in desserts" :key="item.name">
-          <td>{{ item.name }}</td>
-          <td>{{ item.calories }}</td>
+        <tr v-for="item in list" :key="item.fname">
+          <td>{{ item.fname }}</td>
+          <td>{{ item.lname }}</td>
+          <td>{{ item.email }}</td>
+          <td>
+            <v-btn color="red" fab x-small dark @click="remove">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+          </td>
         </tr>
       </tbody>
     </template>
@@ -21,49 +29,24 @@
 export default {
   data() {
     return {
-      desserts: [
+      list: [
         {
-          name: "Frozen Yogurt",
-          calories: 159
+          fname: 'asd',
+          lname: 'asd',
+          email: 'asd@asd.fi'
         },
         {
-          name: "Ice cream sandwich",
-          calories: 237
+          fname: 'qwe',
+          lname: 'qwe',
+          email: 'qwe@qwe.fi'
         },
-        {
-          name: "Eclair",
-          calories: 262
-        },
-        {
-          name: "Cupcake",
-          calories: 305
-        },
-        {
-          name: "Gingerbread",
-          calories: 356
-        },
-        {
-          name: "Jelly bean",
-          calories: 375
-        },
-        {
-          name: "Lollipop",
-          calories: 392
-        },
-        {
-          name: "Honeycomb",
-          calories: 408
-        },
-        {
-          name: "Donut",
-          calories: 452
-        },
-        {
-          name: "KitKat",
-          calories: 518
-        }
       ]
     };
+  },
+  methods: {
+    remove() {
+      console.log('asd')
+    }
   }
 };
 </script>
