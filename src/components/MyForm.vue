@@ -36,7 +36,7 @@
       </v-container>
     </v-form>
     <v-card-actions>
-      <v-btn :disabled="!valid" color="success">Submit</v-btn>
+      <v-btn @click="add" :disabled="!valid" color="success">Submit</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -52,8 +52,8 @@ export default {
     };
   },
   methods: {
-    test() {
-      console.log(this.fname);
+    add() {
+      this.$store.commit("add", { fname: this.fname, lname: this.lname, email: this.email });
     }
   }
 };
