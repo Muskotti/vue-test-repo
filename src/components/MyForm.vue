@@ -1,6 +1,6 @@
 <template>
 <v-container>
-  <v-card class="mx-auto" outlined>
+  <v-card class="mx-auto" outlined max-width="500">
     <v-card-text>
       <p class="display-1 text--primary">Enter information</p>
     </v-card-text>
