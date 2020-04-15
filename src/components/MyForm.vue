@@ -1,12 +1,13 @@
 <template>
-  <v-card class="mx-auto">
+<v-container>
+  <v-card class="mx-auto" outlined>
     <v-card-text>
       <p class="display-1 text--primary">Enter information</p>
     </v-card-text>
     <v-form ref="form" v-model="valid">
       <v-container>
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12">
             <v-text-field
               v-model="fname"
               label="First name"
@@ -15,7 +16,7 @@
             ></v-text-field>
           </v-col>
 
-          <v-col cols="12" md="4">
+          <v-col cols="12"> 
             <v-text-field
               v-model="lname"
               label="Last name"
@@ -24,7 +25,7 @@
             ></v-text-field>
           </v-col>
 
-          <v-col cols="12" md="4">
+          <v-col cols="12">
             <v-text-field
               v-model="email"
               label="E-mail"
@@ -39,6 +40,7 @@
       <v-btn @click="add" :disabled="!valid" color="success">Submit</v-btn>
     </v-card-actions>
   </v-card>
+  </v-container>
 </template>
 
 <script>
