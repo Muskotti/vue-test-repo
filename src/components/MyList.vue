@@ -28,18 +28,17 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 
 export default {
+  name: "form-fill",
   computed: {
-    ...mapState([
-      'list'
-    ]),
+    ...mapState(["list"])
   },
   methods: {
     remove(item) {
       this.$store.commit("remove", { item: item });
-    },
+    }
   }
 };
 </script>
